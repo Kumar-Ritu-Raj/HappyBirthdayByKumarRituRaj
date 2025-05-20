@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <meta name="description" content="HTML Script Birthday Gift">
   <meta property="og:title" content="Special Gift For You ✨">
-  <meta property="og:description" content="Hey kusum, it's your birthday today 🫂">
+  <meta property="og:description" content="Hey Anu..., it's your birthday today 🫂">
   <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMDugl2siKVTnQUhkzqZXmNhnUl_IXm-tsnodgHf4C3dPn6v4gz06nVm1ASqpRXO65Dg3PkYB9bKsThBPUxygLD9Euem9SSTr0LRIGK9x5uaLvK4WIPn6VlSx0qSrPGhTknGVHeVMpioiBcXiqrk-dF3d4SYS8QIkWkDlMgRrdF4vw_iw-EOgTYcwo6xhs/s300/1000314955.jpg">
   <meta property="og:image:alt" content="hbd">
   <meta property="og:type" content="website">
@@ -26,7 +26,7 @@
   <audio src="./assets/angelbabydj.mp3" id="linkmp3" class="hidden" loop></audio>
   <div class="overlay">
     <div class="cover">
-      <p style="font-size:17px; font-weight:700; margin:0">Hi Birthday Girl <b>Kusum</b>👋 <br/> There is a gift for you by Kumar Ritu Raj 🥳 </p>
+      <p style="font-size:17px; font-weight:700; margin:0">Hi Birthday Girl <b>Anu...</b>👋 <br/> There is a gift for you by Kumar Ritu Raj 🥳 </p>
       <div id="loveIn" class="initial">
         <svg class="line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <g transform="translate(2.000000, 2.000000)">
@@ -75,10 +75,10 @@
         st5.src,
       ];
       const texts = [
-        "<b style='font-size:20px'>Hey👋, Paaniii..! 😆</b><br><br><span class='altText'>It’s your birthday today 🫣 <br /> 18-05-2025💗</span><br><br><b><i>Happy Birthday!</i> 🥳</b>",
+        "<b style='font-size:20px'>Hey👋, Anu...! 😆</b><br><br><span class='altText'>It’s your birthday today 🫣 <br /> 20-05-2025💗</span><br><br><b><i>Happy Birthday!</i> 🥳</b>",
         "Would you like a gift? 😆",
         "<span id='textStuck'><b style='font-size:20px'>Alright! 😆</b><br><br><span class='altText' style='line-height:1.5em'>On the count of <b style='color:yellow;'> 4 </b>, I will give you a<br> gift! 🥳 are you Excited 🤩</span></span><br><br><span id='teksTime'><b style='font-size:20px'>⏳ <span id='timerLeft'>1</span></b></span>",
-        "<b style='font-size:20px'>Happy Birthday Kusum! 🫣</b><br><br><span class='altText' style='line-height:1.5em'>🤗🤗Wish You Many-Many Happy Returns of the Day 🤗🤗</span>",
+        "<b style='font-size:20px'>Happy Birthday Anu Priya🫣</b><br><br><span class='altText' style='line-height:1.5em'>🤗🤗Wish You Many-Many Happy Returns of the Day 🤗🤗</span>",
         "<span style='font-size:17px;font-weight:400'>Have A Great Life 🤩</span>",
       ];
 
@@ -181,6 +181,7 @@
         doNotWant();
       }
 
+      // --- Falling Star Effect (JS) ---
       function createFallingStar() {
         const star = document.createElement('div');
         star.className = 'falling-star';
@@ -205,6 +206,220 @@
         }, duration * 1000);
       }
       setInterval(createFallingStar, 350);
+      // --- End Falling Star Effect ---
+
+      // --- Falling Balloon Effect (JS) ---
+      function createFallingBalloon(speed = 1.2) {
+        const balloon = document.createElement('div');
+        balloon.className = 'falling-balloon';
+        const size = Math.random() * 18 + 22; // 22px to 40px
+        balloon.style.width = size + 'px';
+        balloon.style.height = size + 'px';
+        balloon.style.left = Math.random() * 98 + 'vw';
+        balloon.style.opacity = (Math.random() * 0.5 + 0.7).toFixed(2);
+        // Random color for each balloon
+        const colors = ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', '#9966ff', '#ff9f40'];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        balloon.innerHTML = `<svg viewBox='0 0 32 48'><ellipse cx='16' cy='20' rx='14' ry='18' fill='${color}'/><rect x='14' y='38' width='4' height='8' rx='2' fill='#888'/><path d='M16 38 Q18 44 16 46 Q14 44 16 38' stroke='#888' stroke-width='1.5' fill='none'/></svg>`;
+        document.body.appendChild(balloon);
+        const duration = (Math.random() * 1.5 + speed + 1.5); // 2.7s to 4.7s
+        balloon.animate([
+          { transform: `translateY(0px)` },
+          { transform: `translateY(${window.innerHeight + 40}px)` }
+        ], {
+          duration: duration * 1000,
+          easing: 'linear',
+          fill: 'forwards'
+        });
+        setTimeout(() => {
+          balloon.remove();
+        }, duration * 1000);
+      }
+      // Example: createFallingBalloon(1.2) for normal, createFallingBalloon(0.5) for faster
+      setInterval(() => createFallingBalloon(1.2), 1200); // Normal speed
+      setInterval(() => createFallingBalloon(0.5), 3000); // Some faster balloons
+      // --- End Falling Balloon Effect ---
+
+      // --- Falling Present Effect (JS) ---
+      function createFallingPresent(speed = 1.5) {
+        const present = document.createElement('div');
+        present.className = 'falling-present';
+        const size = Math.random() * 16 + 24; // 24px to 40px
+        present.style.width = size + 'px';
+        present.style.height = size + 'px';
+        present.style.left = Math.random() * 98 + 'vw';
+        present.style.opacity = (Math.random() * 0.5 + 0.7).toFixed(2);
+        // Random color for each present
+        const colors = ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', '#9966ff', '#ff9f40'];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        present.innerHTML = `<svg viewBox='0 0 32 32'><rect x='4' y='12' width='24' height='16' rx='4' fill='${color}'/><rect x='14' y='12' width='4' height='16' fill='#fff'/><rect x='4' y='12' width='24' height='4' fill='#fff'/><circle cx='10' cy='12' r='4' fill='${color}'/><circle cx='22' cy='12' r='4' fill='${color}'/></svg>`;
+        document.body.appendChild(present);
+        const duration = (Math.random() * 1.5 + speed + 1.5); // 2.7s to 4.7s
+        present.animate([
+          { transform: `translateY(0px)` },
+          { transform: `translateY(${window.innerHeight + 40}px)` }
+        ], {
+          duration: duration * 1000,
+          easing: 'linear',
+          fill: 'forwards'
+        });
+        setTimeout(() => {
+          present.remove();
+        }, duration * 1000);
+      }
+      setInterval(() => createFallingPresent(1.5), 1800); // Normal speed
+      setInterval(() => createFallingPresent(0.7), 4000); // Some faster presents
+      // --- End Falling Present Effect ---
+
+      // --- Falling Candle Effect (JS) ---
+      function createFallingCandle(speed = 2.2) {
+        const candle = document.createElement('div');
+        candle.className = 'falling-candle';
+        const size = Math.random() * 8 + 18; // 18px to 26px
+        candle.style.width = size + 'px';
+        candle.style.height = (size * 2) + 'px';
+        candle.style.left = Math.random() * 98 + 'vw';
+        candle.style.opacity = (Math.random() * 0.5 + 0.7).toFixed(2);
+        // Random color for candle body
+        const colors = ['#fff', '#ffe066', '#ffb347', '#f67280', '#6c5ce7'];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        candle.innerHTML = `<svg viewBox='0 0 16 32'><rect x='5' y='8' width='6' height='18' rx='2' fill='${color}'/><ellipse cx='8' cy='8' rx='3' ry='4' fill='#fff8dc'/><polygon points='8,0 10,8 6,8' fill='#ffd700'/></svg>`;
+        document.body.appendChild(candle);
+        const duration = (Math.random() * 1.5 + speed + 1.5); // 3.2s to 5.2s
+        candle.animate([
+          { transform: `translateY(0px)` },
+          { transform: `translateY(${window.innerHeight + 40}px)` }
+        ], {
+          duration: duration * 1000,
+          easing: 'linear',
+          fill: 'forwards'
+        });
+        setTimeout(() => {
+          candle.remove();
+        }, duration * 1000);
+      }
+      setInterval(() => createFallingCandle(2.2), 2500); // Normal speed
+      setInterval(() => createFallingCandle(1.0), 6000); // Some faster candles
+      // --- End Falling Candle Effect ---
+
+      // --- Falling Party Hat Effect (JS) ---
+      function createFallingPartyHat(speed = 1.0) {
+        const hat = document.createElement('div');
+        hat.className = 'falling-partyhat';
+        const size = Math.random() * 12 + 20; // 20px to 32px
+        hat.style.width = size + 'px';
+        hat.style.height = size + 'px';
+        hat.style.left = Math.random() * 98 + 'vw';
+        hat.style.opacity = (Math.random() * 0.5 + 0.7).toFixed(2);
+        // Random color for hat
+        const colors = ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', '#9966ff', '#ff9f40'];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        hat.innerHTML = `<svg viewBox='0 0 32 32'><polygon points='16,2 30,30 2,30' fill='${color}'/><circle cx='16' cy='2' r='3' fill='#fff'/></svg>`;
+        document.body.appendChild(hat);
+        const duration = (Math.random() * 1.5 + speed + 1.5); // 2.5s to 4.5s
+        hat.animate([
+          { transform: `translateY(0px)` },
+          { transform: `translateY(${window.innerHeight + 40}px)` }
+        ], {
+          duration: duration * 1000,
+          easing: 'linear',
+          fill: 'forwards'
+        });
+        setTimeout(() => {
+          hat.remove();
+        }, duration * 1000);
+      }
+      setInterval(() => createFallingPartyHat(1.0), 2000); // Normal speed
+      setInterval(() => createFallingPartyHat(0.5), 5000); // Some faster hats
+      // --- End Falling Party Hat Effect ---
+
+      // --- Falling Heart Effect (JS) ---
+      function createFallingHeart(speed = 1.7) {
+        const heart = document.createElement('div');
+        heart.className = 'falling-heart';
+        const size = Math.random() * 10 + 18; // 18px to 28px
+        heart.style.width = size + 'px';
+        heart.style.height = size + 'px';
+        heart.style.left = Math.random() * 98 + 'vw';
+        heart.style.opacity = (Math.random() * 0.5 + 0.7).toFixed(2);
+        heart.innerHTML = `<svg viewBox='0 0 32 32'><path d='M23.6,4.6c-2.6,0-4.9,1.7-5.6,4.1C16.3,6.3,14,4.6,11.4,4.6C7.3,4.6,4,7.9,4,12c0,7.2,12,15.4,12,15.4s12-8.2,12-15.4C28,7.9,24.7,4.6,23.6,4.6z' fill='#ff6384'/></svg>`;
+        document.body.appendChild(heart);
+        const duration = (Math.random() * 1.5 + speed + 1.5); // 2.7s to 4.7s
+        heart.animate([
+          { transform: `translateY(0px)` },
+          { transform: `translateY(${window.innerHeight + 40}px)` }
+        ], {
+          duration: duration * 1000,
+          easing: 'linear',
+          fill: 'forwards'
+        });
+        setTimeout(() => {
+          heart.remove();
+        }, duration * 1000);
+      }
+      setInterval(() => createFallingHeart(1.7), 1700); // Normal speed
+      setInterval(() => createFallingHeart(0.7), 4000); // Some faster hearts
+      // --- End Falling Heart Effect ---
+
+      // --- Falling Smiley Face Effect (JS) ---
+      function createFallingSmiley(speed = 2.0) {
+        const smiley = document.createElement('div');
+        smiley.className = 'falling-smiley';
+        const size = Math.random() * 12 + 22; // 22px to 34px
+        smiley.style.width = size + 'px';
+        smiley.style.height = size + 'px';
+        smiley.style.left = Math.random() * 98 + 'vw';
+        smiley.style.opacity = (Math.random() * 0.5 + 0.7).toFixed(2);
+        smiley.innerHTML = `<svg viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='#ffe066' stroke='#e1b800' stroke-width='2'/><circle cx='11' cy='14' r='2' fill='#333'/><circle cx='21' cy='14' r='2' fill='#333'/><path d='M11 21 Q16 26 21 21' stroke='#333' stroke-width='2' fill='none'/></svg>`;
+        document.body.appendChild(smiley);
+        const duration = (Math.random() * 1.5 + speed + 1.5); // 3s to 5s
+        smiley.animate([
+          { transform: `translateY(0px)` },
+          { transform: `translateY(${window.innerHeight + 40}px)` }
+        ], {
+          duration: duration * 1000,
+          easing: 'linear',
+          fill: 'forwards'
+        });
+        setTimeout(() => {
+          smiley.remove();
+        }, duration * 1000);
+      }
+      setInterval(() => createFallingSmiley(2.0), 2200); // Normal speed
+      setInterval(() => createFallingSmiley(0.8), 5000); // Some faster smileys
+      // --- End Falling Smiley Face Effect ---
+
+      // --- Falling Cupcake Effect (JS) ---
+      function createFallingCupcake(speed = 2.5) {
+        const cupcake = document.createElement('div');
+        cupcake.className = 'falling-cupcake';
+        const size = Math.random() * 14 + 22; // 22px to 36px
+        cupcake.style.width = size + 'px';
+        cupcake.style.height = size + 'px';
+        cupcake.style.left = Math.random() * 98 + 'vw';
+        cupcake.style.opacity = (Math.random() * 0.5 + 0.7).toFixed(2);
+        // Random color for cupcake top
+        const colors = ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', '#9966ff', '#ff9f40'];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        cupcake.innerHTML = `<svg viewBox='0 0 32 32'><ellipse cx='16' cy='16' rx='14' ry='8' fill='${color}'/><rect x='6' y='16' width='20' height='10' rx='4' fill='#fff'/><rect x='10' y='22' width='12' height='6' rx='2' fill='#ffb347'/></svg>`;
+        document.body.appendChild(cupcake);
+        const duration = (Math.random() * 1.5 + speed + 1.5); // 3.5s to 5.5s
+        cupcake.animate([
+          { transform: `translateY(0px)` },
+          { transform: `translateY(${window.innerHeight + 40}px)` }
+        ], {
+          duration: duration * 1000,
+          easing: 'linear',
+          fill: 'forwards'
+        });
+        setTimeout(() => {
+          cupcake.remove();
+        }, duration * 1000);
+      }
+      setInterval(() => createFallingCupcake(2.5), 3000); // Normal speed
+      setInterval(() => createFallingCupcake(1.0), 7000); // Some faster cupcakes
+      // --- End Falling Cupcake Effect ---
+
     </script>
   </div>
   
@@ -212,7 +427,6 @@
   <div>
     <div class="swrapper">
       <div class="box">
-        <div></div>
         <div></div>
         <div></div>
         <div></div>
