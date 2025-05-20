@@ -593,6 +593,8 @@ svg.line {
     opacity: 0;
   }
 }
+
+/* --- Falling Star Effect (CSS) --- */
 .falling-star {
   position: fixed;
   top: 0;
@@ -609,3 +611,119 @@ svg.line {
   height: 100%;
   display: block;
 }
+/* --- End Falling Star Effect --- */
+
+/* --- Falling Balloon Effect (CSS) --- */
+.falling-balloon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 48px;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.9;
+  background: none;
+}
+.falling-balloon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* --- End Falling Balloon Effect --- */
+
+/* --- Falling Present Effect (CSS) --- */
+.falling-present {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  pointer-events: none;
+  will-change: transform;
+  transition: opacity 0.3s;
+}
+.falling-present svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* --- End Falling Present Effect --- */
+
+/* --- Falling Candle Effect (CSS) --- */
+.falling-candle {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  pointer-events: none;
+  will-change: transform;
+  transition: opacity 0.3s;
+}
+.falling-candle svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* --- End Falling Candle Effect --- */
+
+/* --- Falling Party Hat Effect (CSS) --- */
+.falling-partyhat {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  pointer-events: none;
+  will-change: transform;
+  transition: opacity 0.3s;
+}
+.falling-partyhat svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* --- End Falling Party Hat Effect --- */
+
+/* --- Falling Heart Effect (CSS) --- */
+.falling-heart {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  pointer-events: none;
+  will-change: transform;
+  transition: opacity 0.3s;
+}
+.falling-heart svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* --- End Falling Heart Effect --- */
+
+/* --- Falling Smiley Face Effect (CSS) --- */
+.falling-smiley {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  pointer-events: none;
+  will-change: transform;
+  transition: opacity 0.3s;
+}
+.falling-smiley svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* --- End Falling Smiley Face Effect --- */
+
+/* --- Falling Cupcake Effect (CSS) --- */
+.falling-cupcake {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  pointer-events: none;
+  will-change: transform;
+  transition: opacity 0.3s;
+}
+.falling-cupcake svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* --- End Falling Cupcake Effect --- */
